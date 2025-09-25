@@ -2,51 +2,39 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Game Trắc Nghiệm</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Hỏi Vui Đáp Nhộn</title>
   <style>
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f3e7ff;
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #E6E0F8;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-    }
-    header {
-      width: 100%;
+      padding: 0;
       text-align: center;
-      margin-top: 20px;
-      margin-bottom: 10px;
     }
-    header h1 {
-      font-size: 36px;
-      font-weight: 700;
-      color: #6c5ce7;
-      margin: 10px 0 0 0;
-    }
+
     .home-btn {
-      margin-bottom: 10px;
-      padding: 10px 18px;
-      font-size: 14px;
-      border: none;
-      border-radius: 8px;
-      background: #6c5ce7;
+      display: inline-block;
+      margin: 20px auto 10px;
+      padding: 10px 20px;
+      background: #7c4dff;
       color: white;
+      text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
     }
-    .home-btn:hover { background: #4834d4; }
+    .home-btn:hover {
+      background: #5e35b1;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 36px;
+      color: #4a148c;
+    }
 
     .game-wrapper {
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      padding: 20px 30px;
+      margin: 0 auto;
+      padding: 20px 60px;
       border-radius: 20px;
       background: linear-gradient(135deg,
         #ff9a9e, #fad0c4, #fad390,
@@ -54,213 +42,114 @@
       background-size: 400% 400%;
       animation: rainbow 12s ease infinite;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      max-width: 1000px;
+      max-width: 800px;
+      position: relative;
+      z-index: 2; /* để nổi lên trên ảnh */
     }
+
     @keyframes rainbow {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
-    .side-img {
-      width: 250px;
-      height: auto;
-    }
-    .container {
-      width: 500px;
-      background: rgba(255,255,255,0.92);
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      text-align: center;
-    }
+
     .question {
-      font-size: 35px;
-      font-weight: 600;
-      margin-bottom: 20px;
+      font-size: 22px;
+      margin: 20px 0;
+      font-weight: bold;
     }
+
     .answers button {
       display: block;
       width: 100%;
       margin: 10px 0;
-      padding: 14px;
-      font-size: 30px;
-      font-weight: 600;
-      border-radius: 10px;
-      border: 2px solid #ddd;
-      background: #f9f9f9;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .answers button:hover { background: #eef; border-color: #6699ff; }
-    .answers button.correct {
-      background: #c8f7c5;
-      border-color: #27ae60;
-      color: #2c662d;
-      font-weight: bold;
-    }
-    .answers button.wrong {
-      background: #f7c5c5;
-      border-color: #e74c3c;
-      color: #7d1a1a;
-      font-weight: bold;
-    }
-    .feedback {
-      margin-top: 15px;
-      font-size: 28px;
-      font-weight: 600;
-    }
-    .next-btn, .retry-btn {
-      margin-top: 20px;
-      padding: 12px 24px;
-      font-size: 25px;
+      padding: 12px;
+      font-size: 18px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
-      background: #4CAF50;
-      color: white;
-      transition: background 0.3s;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
     }
-    .next-btn:hover { background: #45a049; }
-    .retry-btn { background: #2196F3; }
-    .retry-btn:hover { background: #1976D2; }
-    .leaderboard {
-      margin-top: 20px;
-      text-align: left;
+    .answers button:hover {
+      background: #e1bee7;
     }
-    .leaderboard h3 { margin-bottom: 10px; }
-    .leaderboard ol { padding-left: 20px; }
+
+    .result {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .side-img {
+      width: 200px;
+      height: auto;
+      position: fixed; /* cố định theo màn hình */
+      top: 180px;      /* chỉnh cao thấp */
+      z-index: 1;
+    }
+    .side-img.left { left: 40px; }
+    .side-img.right { right: 40px; }
   </style>
 </head>
 <body>
-  <header>
-    <a href="https://homepage-gray-omega.vercel.app/">
-      <button class="home-btn">Trang chủ</button>
-    </a>
-    <h1>🎮 Chơi game cùng cô Hà nha 🎀</h1>
-  </header>
+  <a href="https://homepage-gray-omega.vercel.app/" class="home-btn">Trang chủ</a>
+  <h1>Hỏi Vui Đáp Nhộn</h1>
+
+  <!-- Ảnh chibi cô Hà -->
+  <img src="trai.png" alt="Cô Hà trái" class="side-img left">
+  <img src="phai.png" alt="Cô Hà phải" class="side-img right">
 
   <div class="game-wrapper">
-    <!-- ảnh bên trái -->
-    <img src="trai.png" alt="Trang trí trái" class="side-img">
-
-    <div class="container">
-      <!-- Khu chơi game -->
-      <div id="game">
-        <div class="question" id="question"></div>
-        <div class="answers" id="answers"></div>
-        <div class="feedback" id="feedback"></div>
-        <button class="next-btn" id="nextBtn" style="display:none;">Tiếp</button>
-      </div>
-
-      <!-- Kết quả -->
-      <div id="result" style="display:none;">
-        <h2>Kết thúc!</h2>
-        <p id="score"></p>
-        <div class="leaderboard">
-          <h3>Bảng xếp hạng</h3>
-          <ol id="leaderboardList"></ol>
-        </div>
-        <button class="retry-btn" onclick="startGame()">Chơi lại</button>
-      </div>
-    </div>
-
-    <!-- ảnh bên phải -->
-    <img src="phai.png" alt="Trang trí phải" class="side-img">
+    <div id="question" class="question"></div>
+    <div class="answers" id="answers"></div>
+    <div id="result" class="result"></div>
+    <button onclick="nextQuestion()">Câu hỏi tiếp theo</button>
   </div>
 
   <script src="questions.js"></script>
   <script>
-    let currentQuestions = [];
-    let currentIndex = 0;
-    let score = 0;
+    let currentQuestion = 0;
 
-    function startGame() {
-      document.getElementById('result').style.display = 'none';
-      document.getElementById('game').style.display = 'block';
-      document.getElementById('feedback').innerText = '';
-      currentIndex = 0;
-      score = 0;
-      currentQuestions = questions.sort(() => 0.5 - Math.random()).slice(0, 10);
-      showQuestion();
-    }
+    function loadQuestion() {
+      const q = questions[currentQuestion];
+      document.getElementById("question").innerText = q.q;
+      const answersDiv = document.getElementById("answers");
+      answersDiv.innerHTML = "";
 
-    function shuffleAnswers(q) {
-      let answersWithIndex = q.answers.map((ans, i) => ({ text: ans, index: i }));
-      answersWithIndex = answersWithIndex.sort(() => Math.random() - 0.5);
-      const correctIndex = answersWithIndex.findIndex(a => a.index === q.correct);
-      return { answersWithIndex, correctIndex };
-    }
-
-    function showQuestion() {
-      const q = currentQuestions[currentIndex];
-      document.getElementById('question').innerText = q.q;
-
-      const { answersWithIndex, correctIndex } = shuffleAnswers(q);
-      q.shuffledCorrect = correctIndex;
-
-      const answersDiv = document.getElementById('answers');
-      answersDiv.innerHTML = '';
-      answersWithIndex.forEach((ans, i) => {
-        const btn = document.createElement('button');
-        btn.innerText = ans.text;
-        btn.onclick = () => selectAnswer(i, btn);
+      // Trộn thứ tự đáp án
+      const indices = [0,1,2].sort(() => Math.random() - 0.5);
+      indices.forEach(i => {
+        const btn = document.createElement("button");
+        btn.innerText = q.answers[i];
+        btn.onclick = () => checkAnswer(i);
         answersDiv.appendChild(btn);
       });
 
-      document.getElementById('feedback').innerText = '';
-      document.getElementById('nextBtn').style.display = 'none';
+      document.getElementById("result").innerText = "";
     }
 
-    function selectAnswer(i, btn) {
-      const q = currentQuestions[currentIndex];
-      const feedback = document.getElementById('feedback');
-      const buttons = document.querySelectorAll('#answers button');
-      if (i === q.shuffledCorrect) {
-        score += 3;
-        feedback.innerText = "✅ Đúng! " + q.explain;
-        feedback.style.color = "green";
-        btn.classList.add('correct');
+    function checkAnswer(choice) {
+      const q = questions[currentQuestion];
+      const resultDiv = document.getElementById("result");
+      if (choice === q.correct) {
+        resultDiv.innerText = "✅ Chính xác! " + q.explain;
+        resultDiv.style.color = "green";
       } else {
-        score -= 1;
-        feedback.innerText = "❌ Sai! " + q.explain;
-        feedback.style.color = "red";
-        btn.classList.add('wrong');
-        buttons[q.shuffledCorrect].classList.add('correct');
+        resultDiv.innerText = "❌ Sai rồi! " + q.explain;
+        resultDiv.style.color = "red";
       }
-      buttons.forEach(b => b.disabled = true);
-      document.getElementById('nextBtn').style.display = 'inline-block';
     }
 
-    document.getElementById('nextBtn').onclick = () => {
-      currentIndex++;
-      if (currentIndex < currentQuestions.length) {
-        showQuestion();
-      } else {
-        endGame();
-      }
+    function nextQuestion() {
+      currentQuestion = Math.floor(Math.random() * questions.length);
+      loadQuestion();
+    }
+
+    window.onload = () => {
+      nextQuestion();
     };
-
-    function endGame() {
-      document.getElementById('game').style.display = 'none';
-      document.getElementById('result').style.display = 'block';
-      document.getElementById('score').innerText = "Điểm của bạn: " + score;
-
-      let leaderboard = JSON.parse(localStorage.getItem('leaderboard') || "[]");
-      leaderboard.push(score);
-      leaderboard.sort((a,b) => b-a);
-      leaderboard = leaderboard.slice(0, 10);
-      localStorage.setItem('leaderboard', JSON.stringify(leaderboard));
-
-      const list = document.getElementById('leaderboardList');
-      list.innerHTML = '';
-      leaderboard.forEach((s, i) => {
-        const li = document.createElement('li');
-        li.innerText = s + " điểm";
-        list.appendChild(li);
-      });
-    }
-
-    startGame();
   </script>
 </body>
 </html>
