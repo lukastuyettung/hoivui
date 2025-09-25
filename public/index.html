@@ -33,8 +33,9 @@
     }
 
     .game-wrapper {
+      position: relative; /* để ảnh chibi bám theo */
       margin: 0 auto;
-      padding: 20px 60px;
+      padding: 20px 100px; /* chừa khoảng trống để không đè chữ */
       border-radius: 20px;
       background: linear-gradient(135deg,
         #ff9a9e, #fad0c4, #fad390,
@@ -43,8 +44,7 @@
       animation: rainbow 12s ease infinite;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
       max-width: 800px;
-      position: relative;
-      z-index: 2; /* để nổi lên trên ảnh */
+      min-height: 300px;
     }
 
     @keyframes rainbow {
@@ -83,29 +83,32 @@
     }
 
     .side-img {
-      width: 200px;
+      width: 160px;
       height: auto;
-      position: fixed; /* cố định theo màn hình */
-      top: 180px;      /* chỉnh cao thấp */
-      z-index: 1;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); /* bám giữa chiều cao wrapper */
     }
-    .side-img.left { left: 40px; }
-    .side-img.right { right: 40px; }
+    .side-img.left { left: -180px; }
+    .side-img.right { right: -180px; }
   </style>
 </head>
 <body>
   <a href="https://homepage-gray-omega.vercel.app/" class="home-btn">Trang chủ</a>
   <h1>Hỏi Vui Đáp Nhộn</h1>
 
-  <!-- Ảnh chibi cô Hà -->
-  <img src="trai.png" alt="Cô Hà trái" class="side-img left">
-  <img src="phai.png" alt="Cô Hà phải" class="side-img right">
-
   <div class="game-wrapper">
-    <div id="question" class="question"></div>
-    <div class="answers" id="answers"></div>
-    <div id="result" class="result"></div>
-    <button onclick="nextQuestion()">Câu hỏi tiếp theo</button>
+    <!-- Ảnh chibi trong wrapper -->
+    <img src="trai.png" alt="Cô Hà trái" class="side-img left">
+    
+    <div class="container">
+      <div id="question" class="question"></div>
+      <div class="answers" id="answers"></div>
+      <div id="result" class="result"></div>
+      <button onclick="nextQuestion()">Câu hỏi tiếp theo</button>
+    </div>
+    
+    <img src="phai.png" alt="Cô Hà phải" class="side-img right">
   </div>
 
   <script src="questions.js"></script>
