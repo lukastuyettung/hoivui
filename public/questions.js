@@ -1,4 +1,318 @@
 const questions = [
+
+  // ==== Đố vui, đố mẹo, chơi chữ - 100 câu mới ====
+
+{ q: "Cái gì có cổ nhưng không có đầu, có bụng nhưng không có chân?", answers: ["Cái chai", "Cái áo", "Cái bàn"], correct: 0, explain: "Chai có cổ chai và thân chai nhưng không có đầu hay chân." },
+
+{ q: "Cái gì có nhiều phím nhưng không mở được ổ khóa?", answers: ["Đàn piano", "Chìa khóa", "Máy tính"], correct: 0, explain: "Đàn piano có rất nhiều phím nhưng không dùng để mở khóa." },
+
+{ q: "Cái gì có nhiều trang nhưng không phải là cây?", answers: ["Quyển sách", "Tờ báo", "Cuốn lịch"], correct: 0, explain: "Sách có nhiều trang giấy, chơi chữ với 'trang'." },
+
+{ q: "Cái gì có chân mà không biết đi, có mặt mà không biết cười?", answers: ["Cái bàn", "Con búp bê", "Cái gương"], correct: 0, explain: "Bàn có chân bàn và mặt bàn nhưng không thể đi hay cười." },
+
+{ q: "Cái gì có kim nhưng không dùng để khâu?", answers: ["Đồng hồ", "Kim tiêm", "Cây thông"], correct: 0, explain: "Đồng hồ có kim giờ, kim phút, kim giây." },
+
+{ q: "Cái gì có hàng nghìn chữ nhưng không biết đọc?", answers: ["Quyển sách", "Máy in", "Tờ báo"], correct: 1, explain: "Máy in có thể tạo ra hàng nghìn chữ nhưng bản thân nó không biết đọc." },
+
+{ q: "Cái gì càng đầy thì càng nhẹ?", answers: ["Bong bóng khí heli", "Cái xô", "Cặp sách"], correct: 0, explain: "Bóng càng chứa nhiều khí heli thì lực nâng càng lớn." },
+
+{ q: "Cái gì có thể chạy vòng quanh sân mà không hề di chuyển?", answers: ["Hàng rào", "Con chó", "Cái bóng"], correct: 0, explain: "Hàng rào chạy vòng quanh sân theo cách nói hình tượng nhưng luôn đứng yên." },
+
+{ q: "Cái gì có đầu, có đuôi nhưng không có thân?", answers: ["Đồng xu", "Con rắn", "Cái kim"], correct: 0, explain: "Đồng xu có mặt đầu và mặt đuôi theo cách gọi trong trò tung đồng xu." },
+
+{ q: "Cái gì có mặt nhưng không có mắt, có tay nhưng không có ngón?", answers: ["Đồng hồ", "Búp bê", "Robot"], correct: 0, explain: "Đồng hồ có mặt đồng hồ và kim đồng hồ được ví như tay." },
+
+{ q: "Cái gì có lưỡi nhưng không biết nếm?", answers: ["Con dao", "Con người", "Con mèo"], correct: 0, explain: "Dao có lưỡi dao nhưng không có vị giác." },
+
+{ q: "Cái gì có mũi nhưng không biết ngửi, có cánh nhưng không biết bay?", answers: ["Máy bay", "Con chim", "Cái thuyền"], correct: 0, explain: "Máy bay có mũi máy bay và cánh máy bay." },
+
+{ q: "Cái gì có cổ áo nhưng không có cái đầu?", answers: ["Cái áo", "Cái chai", "Cái bình"], correct: 0, explain: "Áo có cổ áo nhưng dĩ nhiên không có đầu." },
+
+{ q: "Cái gì có nhiều mắt nhưng không nhìn thấy?", answers: ["Củ khoai tây", "Con nhện", "Quả dứa"], correct: 0, explain: "Khoai tây có những chồi được gọi là mắt khoai." },
+
+{ q: "Cái gì có rễ mà không phải cây?", answers: ["Chiếc răng", "Ngọn núi", "Con sông"], correct: 0, explain: "Răng có chân răng hay rễ răng nằm trong xương hàm." },
+
+{ q: "Cái gì có thể leo lên nhưng không bao giờ leo xuống?", answers: ["Tuổi", "Cầu thang", "Nhiệt độ"], correct: 0, explain: "Tuổi của con người chỉ tăng lên theo thời gian." },
+
+{ q: "Cái gì luôn tăng nhưng không bao giờ giảm theo thời gian?", answers: ["Tuổi đời", "Tiền lương", "Cân nặng"], correct: 0, explain: "Tuổi đời luôn tăng theo thời gian." },
+
+{ q: "Cái gì bạn càng chạy nhanh thì nó càng khó đuổi kịp?", answers: ["Hơi thở", "Cái bóng", "Gió"], correct: 0, explain: "Chạy càng nhanh bạn càng thở gấp và có cảm giác hụt hơi." },
+
+{ q: "Cái gì có thể đi khắp thế giới nhưng luôn nằm ở một góc?", answers: ["Con tem", "Tấm bản đồ", "Chiếc vali"], correct: 0, explain: "Con tem nằm ở góc phong bì nhưng có thể theo thư đi khắp thế giới." },
+
+{ q: "Cái gì có thể bay quanh thế giới mà vẫn nằm trong túi?", answers: ["Hộ chiếu", "Máy bay", "Chim"], correct: 0, explain: "Hộ chiếu theo người đi khắp thế giới nhưng thường nằm trong túi." },
+
+{ q: "Cái gì có thể mở ra nhưng không có cửa?", answers: ["Cuốn sách", "Cái hộp", "Ngôi nhà"], correct: 0, explain: "Sách có thể mở ra để đọc nhưng không có cửa." },
+
+{ q: "Cái gì có thể đóng lại nhưng không cần khóa?", answers: ["Đôi mắt", "Cánh cửa", "Cái két"], correct: 0, explain: "Bạn có thể nhắm hay đóng mắt mà không cần khóa." },
+
+{ q: "Cái gì có thể dài ra khi bị kéo nhưng ngắn lại khi buông?", answers: ["Dây thun", "Sợi dây thép", "Cái thước"], correct: 0, explain: "Dây thun co giãn theo lực kéo." },
+
+{ q: "Cái gì càng thổi càng lớn?", answers: ["Bong bóng", "Ngọn lửa", "Cái còi"], correct: 0, explain: "Bong bóng được bơm hoặc thổi càng nhiều thì càng lớn." },
+
+{ q: "Cái gì càng thổi càng nhỏ?", answers: ["Ngọn nến", "Bong bóng", "Cái còi"], correct: 0, explain: "Thổi vào ngọn nến có thể làm lửa nhỏ dần rồi tắt." },
+
+{ q: "Thứ gì bạn phải đập vỡ trước khi dùng?", answers: ["Quả trứng", "Cái bát", "Hộp sữa"], correct: 0, explain: "Muốn dùng phần bên trong quả trứng thường phải đập vỏ." },
+
+{ q: "Cái gì có thể ăn được nhưng không thể nuốt nguyên cả cái?", answers: ["Cái bánh lớn", "Nước", "Kẹo"], correct: 0, explain: "Một chiếc bánh lớn thường phải cắn hoặc chia nhỏ trước khi ăn." },
+
+{ q: "Cái gì càng gọt càng nhỏ?", answers: ["Bút chì", "Quả dưa", "Cây gỗ"], correct: 0, explain: "Bút chì càng gọt thì càng ngắn và nhỏ đi." },
+
+{ q: "Cái gì càng đào càng sâu?", answers: ["Cái hố", "Cái giếng", "Cả hai"], correct: 2, explain: "Cả hố và giếng đều sâu thêm khi tiếp tục đào." },
+
+{ q: "Cái gì càng kéo càng dài?", answers: ["Sợi dây", "Câu chuyện", "Cả hai"], correct: 2, explain: "Dây có thể được kéo dài, còn câu chuyện cũng có thể bị 'kéo dài'." },
+
+{ q: "Con gì ngủ mà vẫn đứng?", answers: ["Ngựa", "Mèo", "Khỉ"], correct: 0, explain: "Ngựa có thể ngủ đứng nhờ cấu tạo đặc biệt ở chân." },
+
+{ q: "Con gì vừa sinh ra đã biết bơi?", answers: ["Cá", "Gà", "Mèo"], correct: 0, explain: "Cá con có bản năng bơi ngay sau khi nở." },
+
+{ q: "Con gì có nhà riêng trên lưng?", answers: ["Rùa", "Chó", "Thỏ"], correct: 0, explain: "Mai rùa giống như ngôi nhà luôn mang theo trên lưng." },
+
+{ q: "Con gì có tám chân nhưng không phải nhện?", answers: ["Bạch tuộc", "Cua", "Kiến"], correct: 0, explain: "Bạch tuộc có tám xúc tu thường được ví như tám chân." },
+
+{ q: "Con gì có ba tim?", answers: ["Bạch tuộc", "Cá mập", "Cá voi"], correct: 0, explain: "Bạch tuộc có ba trái tim." },
+
+{ q: "Con gì có thể đổi màu để ngụy trang?", answers: ["Tắc kè hoa", "Cá heo", "Chim sẻ"], correct: 0, explain: "Tắc kè hoa nổi tiếng với khả năng thay đổi màu sắc." },
+
+{ q: "Con gì có thể bay lùi?", answers: ["Chim ruồi", "Đại bàng", "Chim sẻ"], correct: 0, explain: "Chim ruồi có cấu tạo cánh cho phép bay lùi." },
+
+{ q: "Con gì mang con trong túi trước bụng?", answers: ["Kangaroo", "Gấu", "Ngựa"], correct: 0, explain: "Kangaroo cái nuôi con non trong túi trước bụng." },
+
+{ q: "Con gì có chiếc cổ dài nhất trong các động vật trên cạn?", answers: ["Hươu cao cổ", "Đà điểu", "Lạc đà"], correct: 0, explain: "Hươu cao cổ nổi tiếng với chiếc cổ rất dài." },
+
+{ q: "Loài vật nào có vân tay gần giống con người?", answers: ["Gấu koala", "Chó", "Ngựa"], correct: 0, explain: "Vân tay của koala có hoa văn rất giống vân tay người." },
+
+{ q: "Con gì đực lại mang thai?", answers: ["Cá ngựa", "Cá mập", "Cá heo"], correct: 0, explain: "Cá ngựa đực mang trứng trong túi ấp và sinh con." },
+
+{ q: "Con gì có máu màu xanh?", answers: ["Bạch tuộc", "Cá voi", "Cá chép"], correct: 0, explain: "Máu bạch tuộc có màu xanh do chứa hemocyanin giàu đồng." },
+
+{ q: "Loài chim nào không bay nhưng bơi rất giỏi?", answers: ["Chim cánh cụt", "Đà điểu", "Gà"], correct: 0, explain: "Chim cánh cụt dùng cánh như mái chèo để bơi dưới nước." },
+
+{ q: "Loài chim nào chạy nhanh nhất trên mặt đất?", answers: ["Đà điểu", "Gà rừng", "Chim công"], correct: 0, explain: "Đà điểu có thể chạy với tốc độ rất cao." },
+
+{ q: "Cái gì càng đứng lâu càng mỏi nhưng không có chân?", answers: ["Cái cột", "Người", "Cái cây"], correct: 0, explain: "Đây là đố vui nhân hóa: cái cột phải 'đứng' suốt ngày." },
+
+{ q: "Cái gì cứ quay mãi nhưng không bao giờ chóng mặt?", answers: ["Cánh quạt", "Con quay", "Cả hai"], correct: 2, explain: "Cả cánh quạt và con quay đều có thể quay liên tục mà không chóng mặt." },
+
+{ q: "Cái gì càng chạy nhanh càng nóng?", answers: ["Động cơ", "Nước đá", "Tủ lạnh"], correct: 0, explain: "Động cơ hoạt động mạnh thường sinh nhiều nhiệt hơn." },
+
+{ q: "Cái gì càng lạnh càng cứng?", answers: ["Nước đá", "Gỗ", "Giấy"], correct: 0, explain: "Nước khi đông lạnh chuyển thành băng rắn." },
+
+{ q: "Cái gì có thể tan mà không cần lửa?", answers: ["Băng", "Sắt", "Đá granite"], correct: 0, explain: "Băng có thể tan ở nhiệt độ thường mà không cần lửa." },
+
+{ q: "Cái gì có thể biến mất chỉ bằng một câu nói?", answers: ["Sự im lặng", "Ánh sáng", "Cái bóng"], correct: 0, explain: "Chỉ cần ai đó lên tiếng thì sự im lặng lập tức biến mất." },
+
+{ q: "Cái gì càng cho đi càng dễ nhận lại?", answers: ["Nụ cười", "Tiền", "Quần áo"], correct: 0, explain: "Bạn mỉm cười với người khác thường sẽ nhận lại một nụ cười." },
+
+{ q: "Cái gì càng học càng thấy mình biết ít?", answers: ["Kiến thức", "Thể thao", "Nấu ăn"], correct: 0, explain: "Càng học nhiều, ta càng nhận ra thế giới kiến thức còn rất rộng." },
+
+{ q: "Cái gì nếu bạn nói tên nó ra thì nó biến mất?", answers: ["Sự im lặng", "Bóng tối", "Bí mật"], correct: 0, explain: "Nói ra bất cứ điều gì thì không còn im lặng nữa." },
+
+{ q: "Cái gì càng cố quên lại càng dễ nhớ?", answers: ["Một kỷ niệm", "Một con số", "Một món ăn"], correct: 0, explain: "Càng cố ép mình quên một ký ức, nhiều khi ta lại càng nghĩ đến nó." },
+
+{ q: "Cái gì có thể cho người khác mà bạn vẫn giữ được?", answers: ["Lời khuyên", "Tiền", "Chiếc áo"], correct: 0, explain: "Cho lời khuyên không làm bạn mất đi kiến thức hay kinh nghiệm của mình." },
+
+{ q: "Cái gì càng nhiều người dùng thì càng có giá trị?", answers: ["Ngôn ngữ", "Một chiếc bánh", "Một cái ghế"], correct: 0, explain: "Ngôn ngữ càng nhiều người sử dụng thì khả năng giao tiếp càng lớn." },
+
+{ q: "Cái gì bạn không nhìn thấy nhưng có thể cảm nhận khi nó thổi?", answers: ["Gió", "Ánh sáng", "Bóng tối"], correct: 0, explain: "Gió không nhìn thấy trực tiếp nhưng có thể cảm nhận được." },
+
+{ q: "Cái gì không có màu nhưng có thể làm mọi thứ ướt?", answers: ["Nước", "Gió", "Không khí"], correct: 0, explain: "Nước tinh khiết không màu và làm vật khác bị ướt." },
+
+{ q: "Cái gì ở trong phòng nhưng có thể nhìn thấy cả thế giới?", answers: ["Tivi", "Cái bàn", "Đèn ngủ"], correct: 0, explain: "Tivi có thể hiển thị hình ảnh và thông tin từ khắp thế giới." },
+
+{ q: "Cái gì nhỏ hơn căn phòng nhưng có thể chứa hàng nghìn căn phòng?", answers: ["Ổ cứng", "Cái hộp", "Tủ quần áo"], correct: 0, explain: "Ổ cứng có thể lưu hàng nghìn hình ảnh hoặc bản thiết kế căn phòng." },
+
+{ q: "Cái gì có thể nghe tiếng bạn nhưng không có tai?", answers: ["Micro", "Cái ghế", "Đèn"], correct: 0, explain: "Micro thu nhận âm thanh dù không có tai." },
+
+{ q: "Cái gì có thể nói lại lời bạn nhưng không có miệng?", answers: ["Máy ghi âm", "Cái gương", "Cây bút"], correct: 0, explain: "Máy ghi âm phát lại chính lời nói đã thu." },
+
+{ q: "Cái gì có thể nhớ hàng triệu thứ nhưng không có bộ não?", answers: ["Máy tính", "Cái bàn", "Tờ giấy"], correct: 0, explain: "Máy tính lưu được lượng dữ liệu rất lớn trong bộ nhớ." },
+
+{ q: "Cái gì có thể nhìn bạn nhưng không có mắt?", answers: ["Camera", "Cái ghế", "Đồng hồ"], correct: 0, explain: "Camera ghi hình bạn mà không có mắt thật." },
+
+{ q: "Cái gì có thể gọi cho bạn nhưng không có miệng?", answers: ["Điện thoại", "Cái loa", "Cái chuông"], correct: 0, explain: "Điện thoại có thể phát cuộc gọi đến mà không có miệng." },
+
+{ q: "Thứ gì có thể thức bạn dậy nhưng bản thân không bao giờ ngủ?", answers: ["Đồng hồ báo thức", "Con mèo", "Người hàng xóm"], correct: 0, explain: "Đồng hồ báo thức luôn sẵn sàng reo đúng giờ." },
+
+{ q: "Cái gì càng bấm nhiều càng mòn?", answers: ["Nút bàn phím", "Cái bàn", "Tờ giấy"], correct: 0, explain: "Các phím thường xuyên được bấm có thể mòn theo thời gian." },
+
+{ q: "Cái gì có cửa sổ nhưng không có ngôi nhà?", answers: ["Máy tính Windows", "Ô tô", "Cả hai"], correct: 2, explain: "Máy tính có Windows, còn ô tô có cửa sổ; đều không phải ngôi nhà." },
+
+{ q: "Cái gì có chuột mà không cần nuôi?", answers: ["Máy tính", "Nhà kho", "Cánh đồng"], correct: 0, explain: "Chuột máy tính là thiết bị điều khiển, không phải con vật." },
+
+{ q: "Mạng gì không bắt được cá?", answers: ["Mạng Internet", "Mạng lưới đánh cá", "Lưới rê"], correct: 0, explain: "Mạng Internet là hệ thống kết nối thông tin, không dùng để bắt cá." },
+
+{ q: "Bàn gì có rất nhiều chữ nhưng không dùng để ăn?", answers: ["Bàn phím", "Bàn ăn", "Bàn trà"], correct: 0, explain: "Bàn phím có rất nhiều chữ cái và ký hiệu." },
+
+{ q: "Ổ gì không dùng để chim làm tổ?", answers: ["Ổ cứng", "Ổ rơm", "Ổ chim"], correct: 0, explain: "Ổ cứng là thiết bị lưu trữ dữ liệu." },
+
+{ q: "Web gì không phải mạng nhện?", answers: ["Website", "Mạng nhện", "Tổ nhện"], correct: 0, explain: "Web trong công nghệ là hệ thống các trang trên Internet." },
+
+{ q: "Cloud gì không tạo ra mưa?", answers: ["Cloud computing", "Đám mây", "Mây đen"], correct: 0, explain: "Cloud computing là điện toán đám mây, không phải mây thật." },
+
+{ q: "Pin gì không dùng để cài áo?", answers: ["Pin điện thoại", "Kim băng", "Pin cài áo"], correct: 0, explain: "Pin điện thoại là nguồn năng lượng, không phải vật để ghim." },
+
+{ q: "Ram gì không phải con dê?", answers: ["RAM máy tính", "Ram thịt", "Cừu đực"], correct: 0, explain: "RAM là bộ nhớ truy cập ngẫu nhiên của máy tính." },
+
+{ q: "Chip gì không ăn được?", answers: ["Chip máy tính", "Khoai tây chiên", "Snack"], correct: 0, explain: "Chip máy tính là linh kiện điện tử." },
+
+{ q: "File gì không phải cái giũa?", answers: ["File máy tính", "Giũa sắt", "Dũa móng"], correct: 0, explain: "File trong máy tính là tập tin dữ liệu." },
+
+{ q: "Virus gì không làm bạn sốt?", answers: ["Virus máy tính", "Virus cúm", "Virus sốt xuất huyết"], correct: 0, explain: "Virus máy tính gây hại cho hệ thống chứ không gây sốt cho người." },
+
+{ q: "Chuỗi gì không đeo trên cổ?", answers: ["Chuỗi ký tự", "Dây chuyền", "Chuỗi hạt"], correct: 0, explain: "Chuỗi ký tự là dãy chữ hoặc ký hiệu trong tin học." },
+
+{ q: "Ô gì không che được nắng?", answers: ["Ô tính trong Excel", "Ô dù", "Ô che"], correct: 0, explain: "Ô trong bảng tính là một cell dữ liệu." },
+
+{ q: "Sheet gì không phải tấm ga giường?", answers: ["Spreadsheet", "Ga giường", "Tấm vải"], correct: 0, explain: "Sheet trong bảng tính là một trang dữ liệu." },
+
+{ q: "Mouse gì không ăn phô mai?", answers: ["Chuột máy tính", "Chuột đồng", "Chuột nhà"], correct: 0, explain: "Mouse máy tính là thiết bị ngoại vi." },
+
+{ q: "Tab gì không phải viên thuốc?", answers: ["Tab trình duyệt", "Viên thuốc", "Kẹo ngậm"], correct: 0, explain: "Tab trình duyệt là một thẻ mở trang web." },
+
+{ q: "Link gì không phải dây xích?", answers: ["Đường liên kết", "Mắt xích", "Sợi xích"], correct: 0, explain: "Link trong Internet là đường liên kết đến một tài nguyên khác." },
+
+{ q: "Post gì không phải bưu điện?", answers: ["Bài đăng", "Bưu kiện", "Bưu điện"], correct: 0, explain: "Post trên mạng xã hội là một bài đăng." },
+
+{ q: "Story gì không nhất thiết là truyện?", answers: ["Tin trên mạng xã hội", "Truyện ngắn", "Tiểu thuyết"], correct: 0, explain: "Story trên mạng xã hội là nội dung tạm thời, không nhất thiết là một câu chuyện." },
+
+{ q: "Reel gì không phải cuộn dây?", answers: ["Video ngắn", "Cuộn phim", "Cuộn dây"], correct: 0, explain: "Reel trên mạng xã hội là dạng video ngắn." },
+
+{ q: "Live gì không phải đang sống?", answers: ["Livestream", "Sinh vật sống", "Cuộc sống"], correct: 0, explain: "Live trong livestream nghĩa là phát trực tiếp." },
+
+{ q: "Comment gì không phải lời bình trong sách?", answers: ["Bình luận mạng xã hội", "Chú thích", "Lời tựa"], correct: 0, explain: "Comment là bình luận mà người dùng để lại trên nội dung số." },
+
+{ q: "Follow gì không nhất thiết phải đi phía sau?", answers: ["Theo dõi tài khoản", "Đi theo người khác", "Bám đuôi"], correct: 0, explain: "Follow trên mạng xã hội nghĩa là theo dõi một tài khoản." },
+
+{ q: "Like gì không phải thích bằng miệng?", answers: ["Nút thích", "Lời khen", "Nụ cười"], correct: 0, explain: "Like là hành động bấm nút thể hiện sự yêu thích." },
+
+{ q: "Share gì cho đi mà vẫn còn nguyên?", answers: ["Chia sẻ bài viết", "Chia đôi cái bánh", "Cho tiền"], correct: 0, explain: "Chia sẻ nội dung số không làm mất bản gốc." },
+
+{ q: "Save gì không phải cứu người?", answers: ["Lưu tệp", "Cứu hộ", "Cứu nạn"], correct: 0, explain: "Save trong máy tính nghĩa là lưu dữ liệu." },
+
+{ q: "Download gì đi xuống mà không cần cầu thang?", answers: ["Tải xuống", "Rơi tự do", "Đi thang máy"], correct: 0, explain: "Download nghĩa đen là 'tải xuống' nhưng không phải chuyển động vật lý." },
+
+{ q: "Upload gì đi lên mà không cần leo?", answers: ["Tải lên", "Leo núi", "Đi cầu thang"], correct: 0, explain: "Upload nghĩa là đưa dữ liệu lên hệ thống hoặc Internet." },
+
+{ q: "Folder gì chứa nhiều thứ nhưng không phải cái tủ?", answers: ["Thư mục máy tính", "Cặp hồ sơ", "Tủ sách"], correct: 0, explain: "Folder máy tính chứa nhiều tệp và thư mục con." },
+
+{ q: "Trash gì chứa rác mà không bốc mùi?", answers: ["Thùng rác máy tính", "Thùng rác nhà bếp", "Xe rác"], correct: 0, explain: "Thùng rác máy tính chỉ chứa các tệp đã xóa." },
+
+{ q: "Home gì không phải nhà để ở?", answers: ["Trang chủ", "Ngôi nhà", "Căn hộ"], correct: 0, explain: "Home trên website thường là trang chủ." },
+
+{ q: "Page gì không nhất thiết là trang giấy?", answers: ["Trang web", "Trang sách", "Tờ giấy"], correct: 0, explain: "Page có thể là một trang trên website hoặc mạng xã hội." },
+
+{ q: "Cookie gì không ăn được?", answers: ["Cookie trình duyệt", "Bánh quy", "Bánh ngọt"], correct: 0, explain: "Cookie trình duyệt là dữ liệu nhỏ được website lưu trên thiết bị." },
+  { q: "Cái gì luôn tăng lên mà không bao giờ giảm xuống?", answers: ["Tuổi tác", "Cân nặng", "Tiền bạc"], correct: 0, explain: "Tuổi tác theo thời gian chỉ có tăng chứ không thể giảm." },
+  { q: "Cái gì chặt không đứt, bứt không rời, phơi không khô, đốt không cháy?", answers: ["Nước", "Tình yêu", "Sợi chỉ"], correct: 0, explain: "Nước là chất lỏng, không thể chặt đứt hay bứt rời." },
+  { q: "Càng cạo thì nó lại càng to ra là cái gì?", answers: ["Cái râu", "Cái hố đất", "Cái đầu"], correct: 1, explain: "Hố đất càng cạo, bới thì miệng hố càng mở rộng." },
+  { q: "Cái gì có răng nhưng không bao giờ cắn ai?", answers: ["Cái cưa", "Cái kéo", "Cái lược"], correct: 2, explain: "Răng lược dùng để chải tóc, hoàn toàn vô hại." },
+  { q: "Con gì sáng đi 4 chân, trưa đi 2 chân, chiều đi 3 chân?", answers: ["Con người", "Con vượn", "Con chó"], correct: 0, explain: "Câu đố Nhân sư: con người nhỏ bò 4 chân, lớn đi 2 chân, già chống gậy 3 chân." },
+  { q: "Cái gì có chìa mà không có ổ khóa?", answers: ["Đàn piano", "Cái hòm", "Xe máy"], correct: 0, explain: "Phím đàn piano tiếng Anh gọi là 'keys' (chìa khóa)." },
+  { q: "Cái gì lúc lên lúc xuống nhưng không bao giờ di chuyển?", answers: ["Cầu thang", "Thang máy", "Chiếc xe"], correct: 0, explain: "Cầu thang nằm cố định một chỗ nhưng dẫn người đi lên và xuống." },
+  { q: "Bàn nào không có chân mà vẫn ăn được cơm?", answers: ["Bàn tay", "Bàn thắng", "Bàn cờ"], correct: 0, explain: "Bàn tay dùng để cầm đũa thìa gắp cơm ăn." },
+  { q: "Cái gì chứa nhiều từ ngữ nhất trên thế giới?", answers: ["Từ điển", "Bách khoa toàn thư", "Trang web"], correct: 0, explain: "Quyển từ điển gom góp hầu hết mọi từ vựng của một ngôn ngữ." },
+  { q: "Cái gì có cổ mà không có đầu?", answers: ["Cái chai", "Cái bàn", "Cái quạt"], correct: 0, explain: "Cái chai có phần cổ chai nhô lên nhưng không có đầu." },
+
+  { q: "Bánh gì ăn vào mà không no bụng chút nào?", answers: ["Bánh vẽ", "Bánh bao", "Bánh rán"], correct: 0, explain: "Bánh vẽ chỉ là lời hứa suông hoặc hình ảnh tượng trưng." },
+  { q: "Cái gì có thể cắt được mà không cần dao kéo?", answers: ["Cơn mưa", "Lời nói", "Thời gian"], correct: 1, explain: "Cắt lời người khác khi họ đang phát biểu." },
+  { q: "Xe nào không bao giờ chở được người?", answers: ["Xe rùa", "Xe chỉ", "Xe lu"], correct: 1, explain: "Xe chỉ là một hành động se sợi chỉ trong may vá." },
+  { q: "Hoa gì biết chạy nhảy, leo trèo?", answers: ["Hoa khôi", "Hoa văn", "Hoa quả"], correct: 0, explain: "Hoa khôi là danh hiệu dành cho người đẹp đạt giải." },
+  { q: "Con gì đực cũng như cái, tên gọi nghe như giống cái?", answers: ["Con bò cái", "Con cua cái", "Con sáo cái"], correct: 0, explain: "Con bò cái thì luôn mang từ 'cái' trong tên phân loại." },
+  { q: "Đường nào không có xe cộ lưu thông bao giờ?", answers: ["Đường chỉ tay", "Đường đất", "Đường hầm"], correct: 0, explain: "Đường chỉ tay nằm trong lòng bàn tay mỗi người." },
+  { q: "Cây gì không trồng từ đất mà mọc ra từ người?", answers: ["Cây bàng", "Cây nấm", "Cây số"], correct: 2, explain: "Cây số (km) là đơn vị đo đạc do con người quy định." },
+  { q: "Cái gì càng thổi thì nó lại càng to?", answers: ["Quả bóng bay", "Ngọn nến", "Nồi cơm"], correct: 0, explain: "Bóng bay nhận thêm hơi thổi vào thì sẽ phồng to lên." },
+  { q: "Chuột nào biết bay như chim trên trời?", answers: ["Chuột đồng", "Chuột dơi", "Chuột chù"], correct: 1, explain: "Dơi thường được dân gian ví von là loài 'chuột có cánh'." },
+  { q: "Trái gì nhiều mắt nhất?", answers: ["Trái ổi", "Trái dứa", "Trái bơ"], correct: 1, explain: "Quả dứa (thơm) có chi chít các hốc mắt bên ngoài vỏ." },
+
+  { q: "Bút gì có thể tẩy xóa chữ trên bảng?", answers: ["Bút chì", "Bút lông bảng", "Bút bi"], correct: 1, explain: "Bút lông bảng viết mực lau được trên bề mặt kính/bảng trắng." },
+  { q: "Quạt gì không tạo ra gió mát?", answers: ["Quạt trần", "Quạt giấy", "Quạt mo"], correct: 1, explain: "Quạt giấy gấp lại để trang trí hoặc chưa xòe ra thì không có gió." },
+  { q: "Vườn gì rộng nhất trên thế giới?", answers: ["Vườn thú", "Vườn quốc gia", "Vườn địa đàng"], correct: 2, explain: "Vườn địa đàng là khái niệm huyền thoại vô biên trong truyền thuyết." },
+  { q: "Đồng nào không thể tiêu được bằng tiền?", answers: ["Đồng hồ", "Đồng xu", "Đồng bạc"], correct: 0, explain: "Đồng hồ là vật dụng đo thời gian chứ không phải tiền tệ." },
+  { q: "Nhà nào không có mái che và tường vôi?", answers: ["Nhà lá", "Nhà xe", "Nhà nước"], correct: 2, explain: "Nhà nước là một thể chế chính trị, bộ máy quản lý xã hội." },
+  { q: "Mặt gì sáng nhất nhưng không ai dám nhìn thẳng lâu?", answers: ["Mặt trời", "Mặt trăng", "Mặt nước"], correct: 0, explain: "Ánh sáng mặt trời quá chói chang có thể làm hại mắt." },
+  { q: "Cái gì ban đêm sinh ra, ban ngày biến mất?", answers: ["Mặt trời", "Sao trên trời", "Cầu vồng"], correct: 1, explain: "Các ngôi sao phát sáng ban đêm và chìm vào ánh sáng ban ngày." },
+  { q: "Cái gì bay lên khi trời đổ mưa?", answers: ["Cái dù (ô)", "Con chim", "Chiếc lá"], correct: 0, explain: "Khi trời mưa thì người ta bung dù bật lên trên đầu." },
+  { q: "Cái gì càng lau chùi thì càng sáng bóng?", answers: ["Tấm gương", "Cái giẻ lau", "Bức tường"], correct: 0, explain: "Mặt gương lau sạch bụi bẩn thì phản chiếu càng sáng rõ." },
+  { q: "Cái gì có thể đi vòng quanh thế giới mà vẫn ở yên một góc?", answers: ["Con tem", "Bưu tá", "Chiếc máy bay"], correct: 0, explain: "Con tem dán cố định ở góc phong bì bay đi khắp địa cầu." },
+
+  { q: "Cái gì có chân nhưng không biết đi, có mặt nhưng không biết cười?", answers: ["Cái đồng hồ", "Cái bàn", "Cái ghế"], correct: 0, explain: "Đồng hồ có mặt số và chân đế đứng nhưng không chuyển động cơ thể." },
+  { q: "Con gì chỉ ăn giấy và mực suốt ngày?", answers: ["Máy in", "Con gián", "Con chuột"], correct: 0, explain: "Máy in cần nạp giấy và mực in để hoạt động." },
+  { q: "Cái gì chặt đầu vẫn sống, bứt đuôi vẫn bơi?", answers: ["Con thằn lằn", "Con giun", "Con cá"], correct: 1, explain: "Loài giun đất có khả năng tái sinh mạnh mẽ các đốt cơ thể." },
+  { q: "Cái gì biết nhại lại mọi âm thanh bạn nói ra?", answers: ["Tiếng vọng (echo)", "Gió thổi", "Dòng suối"], correct: 0, explain: "Tiếng vọng trong hang hoặc vách núi dội lại lời nói của bạn." },
+  { q: "Cái gì không có mùi vị nhưng không ai sống thiếu nó?", answers: ["Nước lọc", "Cơm trắng", "Muối"], correct: 0, explain: "Nước nguyên chất không màu, không mùi, không vị nhưng duy trì sự sống." },
+  { q: "Cái gì luôn có hai mặt: một mặt đen và một mặt trắng?", answers: ["Bàn cờ vây", "Trang sách", "Đồng tiền"], correct: 0, explain: "Cờ vây sử dụng các quân cờ màu đen và trắng đối nghịch." },
+  { q: "Cái gì chỉ nở vào ban đêm mà không nở ban ngày?", answers: ["Hoa quỳnh", "Hoa hồng", "Hoa mai"], correct: 0, explain: "Hoa quỳnh đặc tính nở hoa thơm ngát vào lúc đêm muộn." },
+  { q: "Cái gì càng đập mạnh thì càng nảy cao?", answers: ["Quả bóng rổ", "Hòn đá", "Quả dưa"], correct: 0, explain: "Độ đàn hồi của quả bóng rổ giúp nó bật nảy theo lực tác động." },
+  { q: "Bữa nào trong ngày không bao giờ ăn được vào buổi sáng?", answers: ["Bữa trưa và tối", "Bữa phụ", "Bữa lỡ"], correct: 0, explain: "Bữa trưa và bữa tối theo thời gian diễn ra vào buổi trưa và chiều tối." },
+  { q: "Cái gì bạn có thể cầm bằng tay trái nhưng không bao giờ cầm bằng tay phải?", answers: ["Khuỷu tay phải", "Cổ tay trái", "Ngón tay cái trái"], correct: 0, explain: "Tay phải không thể tự với tới để cầm chặt khuỷu tay của chính nó." },
+
+  { q: "Con đường nào dài nhất mà không ai đo được?", answers: ["Đường đời", "Đường cao tốc", "Đường xích đạo"], correct: 0, explain: "Đường đời là hành trình sống của mỗi con người, vô định và dài lâu." },
+  { q: "Thứ gì luôn chạy nhưng không bao giờ mỏi chân?", answers: ["Dòng thời gian", "Vận động viên", "Con suối"], correct: 0, explain: "Thời gian trôi liên tục không bao giờ ngừng nghỉ." },
+  { q: "Cái gì nằm sâu dưới lòng đất mà ai cũng muốn đào bới?", answers: ["Kho báu", "Củ khoai", "Rễ cây"], correct: 0, explain: "Kho báu, vàng bạc châu báu chôn giấu luôn thu hút con người." },
+  { q: "Cái gì càng nhiều người biết thì càng nhanh hỏng?", answers: ["Bí mật", "Cái máy móc", "Căn nhà"], correct: 0, explain: "Bí mật bị lộ cho nhiều người thì không còn là bí mật nữa." },
+  { q: "Trái gì ăn vào cay xè mà ai cũng thích nếm?", answers: ["Trái ớt", "Trái chanh", "Trái cóc"], correct: 0, explain: "Quả ớt có vị cay nồng đặc trưng dùng làm gia vị khoái khẩu." },
+  { q: "Cái gì có thể rơi xuống nước mà không phát ra tiếng động?", answers: ["Ánh trăng", "Viên đá", "Chiếc lá"], correct: 0, explain: "Bóng trăng soi bóng rọi xuống mặt nước tĩnh lặng không tiếng vang." },
+  { q: "Con gì lúc nào cũng mang theo túi xách phía trước bụng?", answers: ["Chuột túi (Kangaroo)", "Gấu trúc", "Hươu cao cổ"], correct: 0, explain: "Kangaroo có chiếc túi trước bụng để mang và bảo vệ con non." },
+  { q: "Cái gì mở ra thì đón sáng, đóng lại thì tối om?", answers: ["Cửa sổ", "Cái hộp", "Quyển sách"], correct: 0, explain: "Cánh cửa sổ mở ra đưa ánh sáng tự nhiên tràn vào căn phòng." },
+  { q: "Bức tường nào dài nhất hành tinh?", answers: ["Vạn Lý Trường Thành", "Bức tường Berlin", "Bức tường thành nhà Hồ"], correct: 0, explain: "Vạn Lý Trường Thành ở Trung Quốc dài hàng nghìn km." },
+  { q: "Cái gì bạn có thể mượn của người khác nhưng phải trả bằng hành động?", answers: ["Lời hứa", "Sự giúp đỡ", "Nụ cười"], correct: 1, explain: "Khi nhận ơn nghĩa giúp đỡ, ta thường đền đáp bằng hành động tương xứng." },
+
+  { q: "Tháng nào trong năm mọi người ngủ ít nhất?", answers: ["Tháng 2", "Tháng 1", "Tháng 12"], correct: 0, explain: "Tháng 2 chỉ có 28 hoặc 29 ngày, ít ngày nhất nên tổng giờ ngủ ít nhất." },
+  { q: "Cái gì thuộc về bạn nhưng bạn bè dùng để gọi bạn?", answers: ["Tên gọi", "Quần áo", "Điện thoại"], correct: 0, explain: "Tên riêng của bạn do người khác xướng lên để xưng hô." },
+  { q: "Cái gì bạn có thể tạo ra nhưng mắt thường không thể thấy?", answers: ["Suy nghĩ", "Bức tranh", "Bàn ghế"], correct: 0, explain: "Suy nghĩ và ý tưởng nảy sinh trong não bộ vô hình với mắt thường." },
+  { q: "Cái gì không cánh mà bay, không chân mà chạy, không tay mà bò?", answers: ["Mây", "Thời gian", "Con rắn"], correct: 0, explain: "Đám mây lững lờ trôi trên bầu trời theo làn gió cuốn." },
+  { q: "Con gì càng già càng trẻ?", answers: ["Con tôm", "Con cua", "Con người"], correct: 0, explain: "Con tôm khi lột xác thì lớp vỏ mới mềm và non hơn." },
+  { q: "Cái gì mất rồi bạn mới biết mình từng có nó?", answers: ["Cơ hội", "Tiền bạc", "Đồ chơi"], correct: 0, explain: "Cơ hội vụt qua thường để lại nuối tiếc cho người bỏ lỡ." },
+  { q: "Vua ở trong cung gọi là gì?", answers: ["Hoàng thượng", "Vua chúa", "Ở nhà"], correct: 2, explain: "Đố mẹo: Vua ở trong cung điện thì thực chất là đang ở nhà của mình." },
+  { q: "Cái gì càng thổi càng tắt?", answers: ["Ngọn đèn dầu", "Quả bóng", "Ống sáo"], correct: 0, explain: "Ngọn lửa đèn dầu bị luồng gió thổi mạnh sẽ bị dập tắt." },
+  { q: "Hạt gì không bao giờ mọc thành cây?", answers: ["Hạt cát", "Hạt dưa", "Hạt thóc"], correct: 0, explain: "Hạt cát là khoáng chất vô cơ nghiền vụn, không có phôi sinh học." },
+  { q: "Cái gì nối hai bờ sông nhưng không chạm xuống nước?", answers: ["Cây cầu", "Cầu vồng", "Con đò"], correct: 1, explain: "Cầu vồng bắc ngang chân trời sau cơn mưa, không chạm mặt nước." },
+
+  { q: "Con sông nào chảy qua nhiều quốc gia nhất ở Đông Nam Á?", answers: ["Sông Mê Kông", "Sông Hồng", "Sông Đồng Nai"], correct: 0, explain: "Sông Mê Kông chảy qua 6 nước: Trung Quốc, Myanmar, Lào, Thái Lan, Campuchia, VN." },
+  { q: "Cái gì bạn có thể phá vỡ mà không cần chạm vào nó?", answers: ["Sự im lặng", "Cái ly", "Cửa kính"], correct: 0, explain: "Chỉ cần cất tiếng nói là bạn đã phá vỡ bầu không khí im lặng." },
+  { q: "Cái gì không có chân mà leo lên đỉnh núi?", answers: ["Sương mù", "Người leo núi", "Con dê núi"], correct: 0, explain: "Màn sương mù bốc lên bao phủ đỉnh núi cao." },
+  { q: "Cái gì luôn đến vào ban đêm và tan biến vào ban ngày?", answers: ["Giấc mơ", "Bóng tối", "Cả hai đáp án"], correct: 2, explain: "Cả giấc mộng và màn đêm đều phai nhạt khi ánh bình minh ló rạng." },
+  { q: "Cái gì bạn cho đi mà vẫn giữ lại được?", answers: ["Lời khuyên", "Tiền bạc", "Cuốn sách"], correct: 0, explain: "Khi đưa lời khuyên cho ai đó, tri thức và lời nói đó vẫn nằm trong tâm trí bạn." },
+  { q: "Loài hoa nào tượng trưng cho sự thuần khiết vươn lên từ bùn lầy?", answers: ["Hoa sen", "Hoa súng", "Hoa cúc"], correct: 0, explain: "Hoa sen gần bùn mà chẳng hôi tanh mùi bùn." },
+  { q: "Cái gì càng bóc vỏ thì càng cay xè mắt?", answers: ["Củ hành tây", "Quả cam", "Quả chuối"], correct: 0, explain: "Chất khí lưu huỳnh thoát ra khi thái hành tây kích ứng tuyến lệ." },
+  { q: "Con gì kêu meo meo nhưng không bắt chuột?", answers: ["Mèo máy Doraemon", "Mèo mướp", "Mèo rừng"], correct: 0, explain: "Doraemon là chú mèo máy hoạt hình sợ chuột." },
+  { q: "Cái gì nằm im một chỗ mà biết chỉ đường đi?", answers: ["Biển chỉ dẫn", "Tài xế", "Cảnh sát"], correct: 0, explain: "Biển báo giao thông cắm ven đường để hướng dẫn lộ trình." },
+  { q: "Thứ gì cắt đôi ra lại dài hơn lúc ban đầu?", answers: ["Cái que", "Sợi dây thừng", "Chiếc đũa"], correct: 1, explain: "Chơi chữ: Sợi dây cắt đôi ra thì thành hai đoạn dây nối lại dài ra." },
+
+  { q: "Bệnh gì người mắc phải luôn muốn tìm chỗ ngủ?", answers: ["Bệnh lười", "Bệnh cảm", "Bệnh đau đầu"], correct: 0, explain: "Người lười biếng thường thích nằm dài ngủ nướng." },
+  { q: "Cái gì của bạn người ta hay hỏi nhất khi mới gặp?", answers: ["Tên tuổi", "Số tài khoản", "Mật khẩu"], correct: 0, explain: "Chào hỏi làm quen thì câu hỏi đầu tiên luôn là tên tuổi." },
+  { q: "Con gì có mai mà không có nhà lầu?", answers: ["Con rùa", "Con ốc", "Con cua"], correct: 0, explain: "Rùa mang chiếc mai cứng trên lưng để bảo vệ cơ thể." },
+  { q: "Cái gì không có cánh mà vẫn lượn lờ giữa bầu trời?", answers: ["Cánh diều", "Khí cầu", "Cả hai đáp án"], correct: 2, explain: "Diều và khinh khí cầu bay lượn nhờ lực nâng của gió và khí quyển." },
+  { q: "Thứ gì đánh mất rồi khó lòng lấy lại niềm tin?", answers: ["Chữ tín", "Ví tiền", "Chìa khóa"], correct: 0, explain: "Một lần bất tín thì vạn lần bất tin." },
+  { q: "Cái gì nằm giữa trán và cằm?", answers: ["Cái mũi", "Cái tai", "Đôi mắt"], correct: 0, explain: "Vị trí giải phẫu khuôn mặt: trán -> mũi -> miệng -> cằm." },
+  { q: "Cái gì luôn chảy xuôi mà không bao giờ chảy ngược?", answers: ["Dòng thác", "Chiếc xe", "Máy bơm"], correct: 0, explain: "Trọng lực kéo nước thác luôn đổ từ trên cao xuống vực sâu." },
+  { q: "Cái gì càng kéo dài thì càng nhanh hết?", answers: ["Tuổi thọ", "Sợi dây thun", "Thời gian làm bài"], correct: 2, explain: "Kéo dài thời gian chần chừ thì hạn nộp bài càng đến nhanh." },
+  { q: "Vật gì giúp con người nhìn thấu qua những bức tường bê tông?", answers: ["Cửa sổ kính", "Cái kính lúp", "Máy soi"], correct: 0, explain: "Khung cửa sổ mở ra cho phép nhìn xuyên qua giới hạn của bức tường." },
+  { q: "Cái gì bay đi xa mãi không quay về điểm xuất phát?", answers: ["Mũi tên bắn đi", "Hòn đá ném", "Cả hai"], correct: 2, explain: "Vật phóng đi theo quán tính không thể tự lộn về tay người ném." },
+
+  { q: "Cái gì càng gọt vỏ thì ruột càng nhỏ đi?", answers: ["Quả táo", "Cây nến", "Cục tẩy"], correct: 0, explain: "Gọt bỏ lớp vỏ ngoài thì khối lượng quả giảm dần." },
+  { q: "Thứ gì giữ ấm cho bạn vào mùa đông giá rét?", answers: ["Chiếc chăn bông", "Cây quạt", "Băng đá"], correct: 0, explain: "Chăn bông giữ nhiệt độ cơ thể không bị thoát ra ngoài." },
+  { q: "Cái gì kêu tích tắc suốt ngày đêm?", answers: ["Đồng hồ quả lắc", "Chiếc bút", "Cái quạt trần"], correct: 0, explain: "Bộ đếm nhịp cơ học của đồng hồ phát ra âm thanh tích tắc." },
+  { q: "Cái gì bạn không thể nhìn thấy bằng mắt thường nhưng cảm nhận được làn gió mát?", answers: ["Không khí", "Ánh sáng", "Nước"], correct: 0, explain: "Không khí vô hình chuyển động tạo thành những cơn gió mát." },
+  { q: "Cái gì dùng để hứng nước mưa từ mái nhà?", answers: ["Máng xối", "Cái xô", "Cái chậu"], correct: 0, explain: "Máng xối dẫn dòng nước mưa từ mái tôn xuống bể trữ." },
+  { q: "Con gì ban ngày ngủ đứng, ban đêm thức kiếm mồi?", answers: ["Con dơi", "Con ngựa", "Con cú mèo"], correct: 0, explain: "Loài dơi treo ngược mình ngủ cả ngày và kiếm ăn ban đêm." },
+  { q: "Cái gì soi vào thấy hình ảnh của chính mình?", answers: ["Tấm gương", "Bức ảnh", "Mặt đất"], correct: 0, explain: "Gương phẳng phản chiếu nguyên vẹn hình ảnh đối diện nó." },
+  { q: "Cái gì có ngọn nhưng không có gốc?", answers: ["Ngọn nến", "Ngọn núi", "Ngọn đèn"], correct: 0, explain: "Phần lửa cháy trên cây nến được gọi là 'ngọn nến'." },
+  { q: "Con gì biết lặn dưới nước sâu mà không phải là cá?", answers: ["Cá voi", "Chim bói cá", "Con ếch"], correct: 0, explain: "Cá voi là động vật có vú thở bằng phổi nhưng lặn rất sâu." },
+  { q: "Cái gì dùng để đo độ dài của cuốn tập?", answers: ["Thước kẻ", "Cái cân", "Nhiệt kế"], correct: 0, explain: "Thước kẻ có chia vạch centimet dùng đo kích thước độ dài." },
+
+  { q: "Cái gì chứa mực nhưng không phải là con mực?", answers: ["Ống mực bút bi", "Bình hoa", "Cái ly"], correct: 0, explain: "Ruột bút bi chứa đầy dung dịch mực để viết chữ." },
+  { q: "Cái gì giúp thuyền bè cập bến an toàn trong đêm tối?", answers: ["Ngọn hải đăng", "Ánh trăng", "Ngôi sao"], correct: 0, explain: "Hải đăng phát tín hiệu đèn biển dẫn đường cho thủy thủ." },
+  { q: "Thứ gì càng mài sắc bén thì cắt gọt càng nhanh?", answers: ["Lưỡi dao", "Cái muỗng", "Cái đũa"], correct: 0, explain: "Dao mài sắc giúp giảm lực cản và cắt thái ngọt lịm." },
+  { q: "Cái gì luôn đồng hành cùng chân bạn khi chạy bộ?", answers: ["Đôi giày", "Chiếc nón", "Cái áo mưa"], correct: 0, explain: "Giày chạy bộ ôm sát bàn chân bảo vệ bước chạy." },
+  { q: "Cái gì dùng để gõ bàn phím nhập liệu cho máy tính?", answers: ["Các ngón tay", "Bàn chân", "Khuỷu tay"], correct: 0, explain: "Mười đầu ngón tay gõ phím thao tác trên máy vi tính." },
+  { q: "Thứ gì tan nhanh trong miệng mang lại cảm giác mát lạnh ngọt ngào?", answers: ["Cây kem", "Miếng bánh mì", "Viên kẹo cay"], correct: 0, explain: "Kem làm từ sữa đông lạnh tan chảy tức thì khi gặp nhiệt cơ thể." },
+  { q: "Cái gì dùng để bấm ghim giấy tờ lại thành tập?", answers: ["Cái bấm kim", "Cái kéo", "Cây thước"], correct: 0, explain: "Kìm bấm kim giữ chặt các mép giấy ngăn nắp." },
+  { q: "Cái gì che nắng che mưa cho ngôi nhà?", answers: ["Mái nhà", "Bức tường", "Nền gạch"], correct: 0, explain: "Mái nhà là kết cấu phía trên cùng bảo vệ toàn bộ không gian sống." },
+  { q: "Vật dụng nào phát ra âm nhạc khi bật nguồn?", answers: ["Chiếc loa thùng", "Cái bàn", "Cái quạt"], correct: 0, explain: "Loa chuyển đổi tín hiệu điện tử thành sóng âm nhạc lan tỏa." },
+  { q: "Cái gì có nhiều trang sách chứa đầy kiến thức bổ ích?", answers: ["Quyển sách", "Tờ rơi", "Tấm danh thiếp"], correct: 0, explain: "Sách là kho tàng tri thức vô tận của nhân loại." },
+  
   { q: "Con gì mang được cả ngôi nhà?", answers: ["Ốc sên", "Rùa", "Kiến"], correct: 0, explain: "Ốc sên mang cái vỏ trên lưng như ngôi nhà." },
   { q: "Cái gì càng lau càng ướt?", answers: ["Khăn", "Áo mưa", "Giấy"], correct: 0, explain: "Khăn lau thì bản thân nó càng ngày càng ướt." },
   { q: "Cái gì luôn đi mà chẳng bao giờ đến?", answers: ["Ngày mai", "Ngày hôm qua", "Xe buýt"], correct: 0, explain: "Ngày mai luôn ở phía trước, không bao giờ đến được." },
